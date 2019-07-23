@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Science Center</string>
     <string name="powered_by_innovators">Powered by Innovators</string>
+    <string name="attenders">Attenders</string>
+    <string name="profile">Profile</string>
+    <string name="todo">TODO</string>
+    <string name="notices">Notices</string>
+    <string name="payments">PayMents</string>
+    <string name="log_in">Log IN</string>
+    <string name="attendes">Attendes</string>
 </resources>
