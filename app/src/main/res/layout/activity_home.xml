@@ -7,7 +7,7 @@
     tools:context=".Home">
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnprofile"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:text="@string/profile"
@@ -34,7 +34,7 @@
         android:layout_height="150dp"
         android:text="@string/attenders"
         app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/btnprofile"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/btnprofile" />
 
     <Button
         android:id="@+id/btnlog"

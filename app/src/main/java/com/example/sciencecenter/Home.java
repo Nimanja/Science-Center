@@ -36,10 +36,21 @@ public class Home extends AppCompatActivity {
         });
 
         button = findViewById(R.id.btnlog);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Login.class);
+                startActivity(i);
+            }
+        });
+
+        button = findViewById(R.id.btnprofile);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Profile.class);
                 startActivity(i);
             }
         });
