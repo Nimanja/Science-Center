@@ -8,4 +8,10 @@
     <string name="log_in">Log IN</string>
     <string name="attendes">Attendes</string>
     <string name="notices">Notices</string>
+    <string name="news">News</string>
+    <string name="time_table">Time table</string>
+    <string name="teacher">Teacher</string>
+    <string name="ads">Ads</string>
+    <string name="feedback">FeedBack</string>
+    <string name="CLASS">Class</string>
 </resources>
