@@ -23,6 +23,11 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        txtusername = (EditText)findViewById(R.id.txtview_username);
+        txtpassword = (EditText)findViewById(R.id.txtview_password);
+        btnlogin = (Button)findViewById(R.id.btnlogin);
+        txtclickhere = (TextView)findViewById(txtview_register);
+
 
         button = findViewById(R.id.btnback);
 
@@ -78,14 +83,14 @@ public class Login extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        txtusername = (EditText)findViewById(R.id.txtview_username);
-        txtpassword = (EditText)findViewById(R.id.txtview_password);
-        btnlogin = (Button)findViewById(R.id.btnlogin);
-        txtclickhere = (TextView)findViewById(txtview_register);
+        button = findViewById(R.id.btnnewregister);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),register.class);
+                startActivity(i);
+            }
+        });
 
 
     }

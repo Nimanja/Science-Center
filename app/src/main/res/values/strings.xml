@@ -25,6 +25,12 @@
     <string name="txt_username">txtusername</string>
     <string name="txt_password">txtpassword</string>
     <string name="txtview_register">Register</string>
+    <string name="FirstName">firstname</string>
+    <string name="LastName">lastname</string>
+    <string name="Password">password</string>
+    <string name="Email">email</string>
+    <string name="Phone">phone</string>
+    <string name="Register">register</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
