@@ -54,5 +54,14 @@ public class Home extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        button = findViewById(R.id.btnpayment);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Payment.class);
+                startActivity(i);
+            }
+        });
     }
 }
