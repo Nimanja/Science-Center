@@ -6,8 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import static com.example.sciencecenter.R.id.txtview_register;
 
 public class Login extends AppCompatActivity {
+    EditText txtusername;
+    EditText txtpassword;
+    Button btnlogin;
+    TextView txtclickhere;
+
 
     Button button;
     @Override
@@ -69,5 +78,16 @@ public class Login extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        txtusername = (EditText)findViewById(R.id.txtview_username);
+        txtpassword = (EditText)findViewById(R.id.txtview_password);
+        btnlogin = (Button)findViewById(R.id.btnlogin);
+        txtclickhere = (TextView)findViewById(txtview_register);
+
+
     }
+
 }

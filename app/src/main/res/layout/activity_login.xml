@@ -150,7 +150,7 @@
         app:layout_constraintVertical_bias="0.128" />
 
     <EditText
-        android:id="@+id/txtusername"
+        android:id="@+id/txtview_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -164,7 +164,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtpassword"
+        android:id="@+id/txtview_password"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
@@ -188,7 +188,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/submit"
+        android:text="@string/login"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -232,18 +232,19 @@
         app:layout_constraintVertical_bias="0.534" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtview_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/clickhere"
+        android:text="@string/Clickhere"
+        android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintHorizontal_bias="0.631"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.545" />
