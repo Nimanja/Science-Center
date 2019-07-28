@@ -24,6 +24,15 @@ public class Attendees extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        button = findViewById(R.id.btnN);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Notices.class);
+                startActivity(i);
+            }
+        });
         button = findViewById(R.id.btnback);
 
         button.setOnClickListener(new View.OnClickListener() {
