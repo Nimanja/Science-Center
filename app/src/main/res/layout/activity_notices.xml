@@ -44,14 +44,14 @@
         android:layout_marginEnd="8dp"
         android:scrollbarSize="4dp"
         android:text="CLASS"
-        app:layout_constraintBottom_toTopOf="@+id/button12"
+        app:layout_constraintBottom_toTopOf="@+id/btmtime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btnFeed"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
@@ -64,11 +64,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/btuAds"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btuAds"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
@@ -76,14 +76,14 @@
         android:layout_marginEnd="8dp"
         android:scrollbarSize="4dp"
         android:text="@string/ads"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
+        app:layout_constraintBottom_toTopOf="@+id/btnFeed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button13" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNews" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/btntech"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
@@ -91,14 +91,14 @@
         android:layout_marginEnd="8dp"
         android:scrollbarSize="4dp"
         android:text="@string/teacher"
-        app:layout_constraintBottom_toTopOf="@+id/button13"
+        app:layout_constraintBottom_toTopOf="@+id/btnNews"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button12" />
+        app:layout_constraintTop_toBottomOf="@+id/btmtime" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/btmtime"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
@@ -106,14 +106,14 @@
         android:layout_marginEnd="8dp"
         android:scrollbarSize="4dp"
         android:text="@string/time_table"
-        app:layout_constraintBottom_toTopOf="@+id/button14"
+        app:layout_constraintBottom_toTopOf="@+id/btntech"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnclass" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/btnNews"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
@@ -121,11 +121,11 @@
         android:layout_marginEnd="8dp"
         android:scrollbarSize="4dp"
         android:text="@string/news"
-        app:layout_constraintBottom_toTopOf="@+id/button11"
+        app:layout_constraintBottom_toTopOf="@+id/btuAds"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button14" />
+        app:layout_constraintTop_toBottomOf="@+id/btntech" />
 
     <View
         android:id="@+id/view"
