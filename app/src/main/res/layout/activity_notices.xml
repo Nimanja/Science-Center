@@ -43,7 +43,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:scrollbarSize="4dp"
-        android:text="CLASS"
+        android:text="@string/class1"
         app:layout_constraintBottom_toTopOf="@+id/btmtime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -33,12 +33,39 @@ public class Payment extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        button = findViewById(R.id.btnA);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Attendees.class);
+                startActivity(i);
+            }
+        });
+        button = findViewById(R.id.btnP);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Payment.class);
+                startActivity(i);
+            }
+        });
         button = findViewById(R.id.btnN);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Notices.class);
+                startActivity(i);
+            }
+        });
+        button = findViewById(R.id.btnpf);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Profile.class);
                 startActivity(i);
             }
         });

@@ -15,12 +15,39 @@ public class Attendees extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendees);
 
+        button = findViewById(R.id.btnback);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Home.class);
+                startActivity(i);
+            }
+        });
         button = findViewById(R.id.btnH);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Home.class);
+                startActivity(i);
+            }
+        });
+        button = findViewById(R.id.btnA);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Attendees.class);
+                startActivity(i);
+            }
+        });
+        button = findViewById(R.id.btnP);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Payment.class);
                 startActivity(i);
             }
         });
@@ -33,12 +60,12 @@ public class Attendees extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        button = findViewById(R.id.btnback);
+        button = findViewById(R.id.btnpf);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Home.class);
+                Intent i = new Intent(getApplicationContext(), Profile.class);
                 startActivity(i);
             }
         });

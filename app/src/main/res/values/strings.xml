@@ -14,4 +14,8 @@
     <string name="ads">Ads</string>
     <string name="feedback">FeedBack</string>
     <string name="CLASS">Class</string>
+    <string name="payment">Payment</string>
+    <string name="login">LogIn</string>
+    <string name="profile1">Profile</string>
+    <string name="class1">CLASS</string>
 </resources>
