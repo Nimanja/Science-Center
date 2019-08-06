@@ -140,13 +140,23 @@
 
             <Spinner
                 android:id="@+id/Spin1"
-                android:layout_width="180dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:textSize="30sp" />
 
+            <Button
+                android:onClick="displaySubList"
+                android:background="@drawable/aenter"
+                android:id="@+id/BtnOK"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                 />
+
             <TextView
+                android:textAlignment="center"
                 android:id="@+id/Tvdate1"
-                android:layout_width="180dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:hint="@string/date"
                 android:textSize="30sp" />
@@ -169,12 +179,21 @@
             tools:layout_editor_absoluteX="52dp"
             tools:layout_editor_absoluteY="90dp">
 
+            <TextView
+                android:textSize="24sp"
+                android:id="@+id/TvSub"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="75dp"/>
+
             <EditText
                 android:id="@+id/EtStID1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="75dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="75dp"
                 android:ems="10"
                 android:hint="@string/student_id"
@@ -205,7 +224,13 @@
                 android:text="@string/attendance"
                 android:textSize="30sp" />
 
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
             <RadioButton
+
                 android:id="@+id/RbAb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -218,9 +243,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
-                android:layout_marginBottom="20dp"
                 android:text="@string/present"
                 android:textColor="#DF1F11" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_marginLeft="100dp"
+                android:id="@+id/Tvatt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
         </LinearLayout>
 
@@ -238,6 +271,7 @@
                 android:layout_height="match_parent"/>
 
             <Button
+                android:onClick="save"
                 android:id="@+id/BtnSave"
                 style="@android:style/Widget.Button"
                 android:layout_width="75dp"
@@ -288,9 +322,9 @@
                 android:textSize="25sp" />
 
             <ImageView
+                android:background="@drawable/atrash"
                 android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/atrash" />
+                android:layout_height="match_parent" />
 
 
             <Button
