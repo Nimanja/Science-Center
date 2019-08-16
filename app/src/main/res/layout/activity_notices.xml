@@ -40,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="#2196F3"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnH"
