@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Science Center</string>
+    <string name="powered_by_innovators">Powered by Innovators</string>
+    <string name="attenders">Attenders</string>
+    <string name="profile">Profile</string>
+    <string name="payments">PayMents</string>
+    <string name="log_in">Log IN</string>
+    <string name="attendes">Attendes</string>
+    <string name="notices">Notices</string>
+    <string name="news">News</string>
+    <string name="time_table">Time table</string>
+    <string name="teacher">Teacher</string>
+    <string name="ads">Ads</string>
+    <string name="feedback">FeedBack</string>
+    <string name="CLASS">Class</string>
+    <string name="payment">Payment</string>
+    <string name="login">LogIn</string>
+    <string name="profile1">Profile</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="ForgetPassword">Forget Password</string>
+    <string name="Clickhere">Click here?</string>
+    <string name="txt_username">txtusername</string>
+    <string name="txt_password">txtpassword</string>
+    <string name="txtview_register">Register</string>
+    <string name="FirstName">firstname</string>
+    <string name="LastName">lastname</string>
+    <string name="Password">password</string>
+    <string name="Email">email</string>
+    <string name="Phone">phone</string>
+    <string name="Register">register</string>
+    <string name="btnFback">btnFback</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="class1">Choose a class</string>
+    <string name="todo1">TODO</string>
+    <string name="time">Time</string>
+    <string name="class_teacher">Class Teacher</string>
+    <string name="hall_number">Hall Number</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name</string>
+    <string name="text_area">Text Area</string>
+    <string name="reset">Reset</string>
+    <string name="view_feedback">View Feedback</string>
+    <string name="attendance">Attendance</string>
+    <string name="student_id">Student ID</string>
+    <string name="subject">Subject</string>
+    <string name="date">Date</string>
+    <string name="_190001">190001</string>
+    <string name="student_name">Student Name</string>
+    <string name="absent">Absent</string>
+    <string name="present">Present</string>
+    <string name="delete">DELETE</string>
+    <string name="view">VIEW</string>
+    <string name="save">SAVE</string>
+    <string name="update">UPDATE</string>
+    <string name="press_date">Press Date</string>
+
+
+    <string-array name="Subject">
+        <item>Choose ....</item>
+        <item>Bio</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>Maths</item>
+        <item>ICT</item>
+    </string-array>
+
+    <string-array name="gread">
+        <item>Choose ....</item>
+        <item>12Thory</item>
+        <item>13Thory</item>
+        <item>12Revition</item>
+        <item>13Revition</item>
+        <item></item>
+    </string-array>
+</resources>
