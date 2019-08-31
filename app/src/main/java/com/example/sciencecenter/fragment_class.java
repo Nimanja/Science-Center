@@ -17,5 +17,6 @@ public class fragment_class extends AppCompatActivity {
                     .replace(R.id.container, FragmentClassFragment.newInstance())
                     .commitNow();
         }
+
     }
 }

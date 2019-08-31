@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(HomeInten);
                 finish();
             }
-        },SPLASH_TIME_OUT);
+        },3000);
     }
 
     @Override
