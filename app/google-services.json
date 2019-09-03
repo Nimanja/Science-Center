@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "95589157613",
+    "firebase_url": "https://science-center.firebaseio.com",
+    "project_id": "science-center",
+    "storage_bucket": "science-center.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95589157613:android:bca34ad045401da9",
+        "android_client_info": {
+          "package_name": "com.example.sciencecenter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95589157613-th6fmouj3ji828bh6ktkg0cc1ev4ic7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sciencecenter",
+            "certificate_hash": "adb8cabe5da424372bbba33ed731c7e838a7f4d0"
+          }
+        },
+        {
+          "client_id": "95589157613-vh8g5nrij0162hbb4meoo8jf8pai51d7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEgKfJNFF3BIApgMtORUmXNZJ7YyfTzuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95589157613-vh8g5nrij0162hbb4meoo8jf8pai51d7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

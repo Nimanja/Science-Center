@@ -18,19 +18,12 @@
     <string name="login">LogIn</string>
     <string name="profile1">Profile</string>
     <string name="class1">CLASS</string>
-    <string name="submit">Submit</string>
-    <string name="cancel">Cancel</string>
-    <string name="ForgetPassword">Forget Password</string>
-    <string name="Clickhere">Click here?</string>
-    <string name="txt_username">txtusername</string>
-    <string name="txt_password">txtpassword</string>
-    <string name="txtview_register">Register</string>
-    <string name="FirstName">firstname</string>
-    <string name="LastName">lastname</string>
-    <string name="Password">password</string>
-    <string name="Email">email</string>
-    <string name="Phone">phone</string>
-    <string name="Register">register</string>
+    <string name="firstname">FirstName</string>
+    <string name="lastname">LastName</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="register">Register</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

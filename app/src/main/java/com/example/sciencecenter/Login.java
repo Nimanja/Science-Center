@@ -1,32 +1,37 @@
 package com.example.sciencecenter;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import static com.example.sciencecenter.R.id.txtview_register;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
+    SQLiteDatabase db;
+    SQLiteOpenHelper openHelper;
+
     EditText txtusername;
     EditText txtpassword;
     Button btnlogin;
     TextView txtclickhere;
-
-
+    Cursor cursor;
     Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        txtusername = (EditText)findViewById(R.id.txtview_username);
-        txtpassword = (EditText)findViewById(R.id.txtview_password);
-        btnlogin = (Button)findViewById(R.id.btnlogin);
-        txtclickhere = (TextView)findViewById(txtview_register);
+
+
+        btnlogin = (Button)findViewById(R.id.btnlog);
+        txtusername = (EditText)findViewById(R.id.txtfname);
+        txtpassword = (EditText)findViewById(R.id.txtpass);
 
 
         button = findViewById(R.id.btnback);
@@ -83,7 +88,7 @@ public class Login extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        button = findViewById(R.id.btnnewregister);
+        button = findViewById(R.id.btnreg);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,7 +97,13 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        
+
+
+
 
     }
 
-}
+    }
+
+
