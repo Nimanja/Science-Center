@@ -16,6 +16,7 @@ import com.example.sciencecenter.R;
 
 public class FragmentClassFragment extends Fragment {
 
+
     private FragmentClassViewModel mViewModel;
 
     public static FragmentClassFragment newInstance() {
