@@ -51,13 +51,14 @@ public class Notices extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        button = findViewById(R.id.btnN);
+        button = findViewById(R.id.btnFeedback);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Notices.class);
-                startActivity(i);
+                /*Intent i = new Intent(getApplicationContext(), Notices.class);
+                startActivity(i);*/
+                getSupportFragmentManager().beginTransaction().replace(R.id.defaultFragment, new FeedbackFragment()).addToBackStack(null).commit();
             }
         });
         button = findViewById(R.id.btnpf);
