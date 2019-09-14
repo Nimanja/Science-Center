@@ -75,10 +75,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:ems="10"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:inputType="textPersonName"
                 android:textColor="#ffff"
-                android:textColorHint="#ffff" />
+                android:textColorHint="#ffff"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/msgText"
@@ -86,11 +87,12 @@
                 android:layout_height="195dp"
                 android:layout_marginTop="24dp"
                 android:ems="10"
-                android:hint="Text Area"
+                android:hint="@string/text_area"
                 android:inputType="textPersonName"
                 android:textColor="#ffff"
                 android:textColorHint="#ffff"
-                android:textSize="20dp" />
+                android:textSize="20sp"
+                android:importantForAutofill="no" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -114,21 +116,22 @@
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Reset" />
+                    android:text="@string/reset" />
 
                 <Button
                     android:id="@+id/button8"
-                    android:layout_width="135dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="49dp"
-                    android:text="View Feedback" />
+                    android:text="@string/view_feedback" />
 
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/camView"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/todo"
                 android:src="@android:drawable/ic_menu_report_image" />
 
 

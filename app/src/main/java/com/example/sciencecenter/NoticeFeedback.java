@@ -36,7 +36,7 @@ public class NoticeFeedback extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(getApplicationContext(), NoticesHome.class);
+                Intent i = new Intent(getApplicationContext(), Notices.class);
                 startActivity(i);
             }
         });

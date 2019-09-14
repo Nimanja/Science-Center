@@ -35,10 +35,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="class1">Choose a class</string>
-    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
     <string name="time">Time</string>
     <string name="class_teacher">Class Teacher</string>
     <string name="hall_number">Hall Number</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name</string>
+    <string name="text_area">Text Area</string>
+    <string name="reset">Reset</string>
+    <string name="view_feedback">View Feedback</string>
 
     <string-array name="Subject">
         <item>Choose ....</item>
