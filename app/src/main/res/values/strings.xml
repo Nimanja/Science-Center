@@ -29,19 +29,32 @@
     <string name="Email">email</string>
     <string name="Phone">phone</string>
     <string name="Register">register</string>
+    <string name="btnFback">btnFback</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="class1">Choose a class</string>
     <string name="todo">TODO</string>
+    <string name="time">Time</string>
+    <string name="class_teacher">Class Teacher</string>
+    <string name="hall_number">Hall Number</string>
 
-    <string-array name="class1">
+    <string-array name="Subject">
         <item>Choose ....</item>
         <item>Bio</item>
         <item>Physics</item>
         <item>Chemistry</item>
         <item>Maths</item>
         <item>ICT</item>
+    </string-array>
+
+    <string-array name="gread">
+        <item>Choose ....</item>
+        <item>12Thory</item>
+        <item>13Thory</item>
+        <item>12Revition</item>
+        <item>13Revition</item>
+        <item></item>
     </string-array>
 </resources>

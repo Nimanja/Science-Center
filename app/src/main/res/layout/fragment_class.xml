@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="#ffffff"
-                android:entries="@array/class1"
+                android:entries="@array/Subject"
                 android:prompt="@string/class1" />
 
             <Spinner
@@ -28,35 +28,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="#ffffff"
-                android:entries="@array/class1"
+                android:entries="@array/gread"
                 android:prompt="@string/class1" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:text="Time"
+                android:text="@string/time"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:text="Hall Number"
+                android:text="@string/hall_number"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:text="Class Teacher"
+                android:text="@string/class_teacher"
                 android:textAlignment="center" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                app:srcCompat="@drawable/logo" />
+                app:srcCompat="@drawable/logo"
+                android:contentDescription="@string/todo" />
 
         </LinearLayout>
     </ScrollView>
