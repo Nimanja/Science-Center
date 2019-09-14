@@ -1,15 +1,17 @@
 package com.example.sciencecenter;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class register extends AppCompatActivity {
     SQLiteOpenHelper openHelper;
@@ -54,4 +56,3 @@ public class register extends AppCompatActivity {
         long id = db.insert(DatabaseHelper.TABLE_NAME,null,contentValues);
     }
 }
-/*blkalklkja*/
