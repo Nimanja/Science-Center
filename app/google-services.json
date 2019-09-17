@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "490862743270",
+    "firebase_url": "https://science-center-b7101.firebaseio.com",
+    "project_id": "science-center-b7101",
+    "storage_bucket": "science-center-b7101.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490862743270:android:0f9e43b1a083d23565f527",
+        "android_client_info": {
+          "package_name": "com.example.sciencecenter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490862743270-hnmcuku05e1f9dfk0o7f9i7ab453hpr4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sciencecenter",
+            "certificate_hash": "b0307af78b1dc26324754cddb0248564c47b9043"
+          }
+        },
+        {
+          "client_id": "490862743270-34lecs36ibla9k7b35egql3tf8dd2fnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ5DumsdzyqUmmDFPgtrls6JB5tkmgnWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490862743270-34lecs36ibla9k7b35egql3tf8dd2fnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

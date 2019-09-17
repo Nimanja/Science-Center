@@ -7,7 +7,7 @@
     tools:context=".Login">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/headerView"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:contentDescription="@string/todo"
@@ -29,11 +29,11 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/headerView"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toEndOf="@+id/btnback"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/headerView" />
 
     <View
         android:id="@+id/view"
@@ -103,7 +103,7 @@
         android:layout_marginStart="16dp"
         android:background="?attr/actionModeCloseDrawable"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/headerView"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <Button
@@ -113,7 +113,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/headerView"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <TextView
@@ -155,7 +155,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txtun"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/headerView" />
 
     <EditText
         android:id="@+id/txtview_password"
