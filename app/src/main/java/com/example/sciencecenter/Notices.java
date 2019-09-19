@@ -88,5 +88,13 @@ public class Notices extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        button = findViewById(R.id.ViewFB);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), View_Feedback.class);
+                startActivity(i);
+            }
+        });
     }
 }

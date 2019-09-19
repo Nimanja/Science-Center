@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Notices">
 
     <Button
@@ -16,20 +17,20 @@
         android:text="CLASS"
         app:layout_constraintBottom_toTopOf="@+id/btmtime2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btuAds2"
+        app:layout_constraintEnd_toStartOf="@+id/ViewFB"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerView" />
 
     <Button
-        android:id="@+id/btuAds2"
+        android:id="@+id/ViewFB"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:scrollbarSize="4dp"
-        android:text="@string/ads"
+        android:text="@string/view_feedback_btn"
         app:layout_constraintBottom_toTopOf="@+id/btnFeedback"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btntech2"
@@ -52,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btmtime2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btuAds2"
+        app:layout_constraintStart_toEndOf="@+id/ViewFB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btmtime2" />
 
@@ -82,7 +83,7 @@
         android:layout_marginEnd="8dp"
         android:scrollbarSize="4dp"
         android:text="@string/news"
-        app:layout_constraintBottom_toTopOf="@+id/btuAds2"
+        app:layout_constraintBottom_toTopOf="@+id/ViewFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnFeedback"
         app:layout_constraintHorizontal_bias="0.5"
@@ -104,7 +105,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnNews2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btuAds2" />
+        app:layout_constraintTop_toBottomOf="@+id/ViewFB" />
 
     <Button
         android:id="@+id/btnH"

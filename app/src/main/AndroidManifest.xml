@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ClassInside"></activity>
-        <activity android:name=".NoticeFeedback" />
+        <activity android:name=".View_Feedback"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ClassInside" />
+        <activity android:name=".NoticeFeedback"
+            android:screenOrientation="portrait"/>
         <activity android:name=".register" />
-        <activity android:name=".fragment_class" />
         <activity android:name=".Profile" />
         <activity android:name=".Payment" />
         <activity android:name=".Attendees" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

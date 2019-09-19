@@ -31,7 +31,7 @@
     <string name="Register">register</string>
     <string name="btnFback">btnFback</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="class1">Choose a class</string>
@@ -44,6 +44,7 @@
     <string name="text_area">Text Area</string>
     <string name="reset">Reset</string>
     <string name="view_feedback">View Feedback</string>
+    <string name="view_feedback_btn">View FeedBack</string>
 
     <string-array name="Subject">
         <item>Choose ....</item>
