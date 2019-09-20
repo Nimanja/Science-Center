@@ -9,6 +9,25 @@ public class ChemistryTB {
     private String subject;
     private String attendance;
     private String date;
+    private String fee;
+
+    public String getFee() {
+        return fee;
+    }
+
+    public void setFee(String fee) {
+        this.fee = fee;
+    }
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
+    }
+
+    private String payment;
 
     public ChemistryTB() {
     }
