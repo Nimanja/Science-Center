@@ -1,8 +1,10 @@
 package com.example.sciencecenter;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +22,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 
 import java.util.HashMap;
 
@@ -47,6 +48,8 @@ public class NoticeFeedback extends AppCompatActivity {
 
         loadingBar = new ProgressDialog(this);
 
+        String UniquesID = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +60,8 @@ public class NoticeFeedback extends AppCompatActivity {
 
             }
         });
+
+
 
         msubbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,8 +119,8 @@ public class NoticeFeedback extends AppCompatActivity {
                                             Toast.makeText(NoticeFeedback.this,"Feedback is successful Thank you",Toast.LENGTH_SHORT).show();
                                             loadingBar.dismiss();
 
-                                            Intent i = new Intent(NoticeFeedback.this,Notices.class);
-                                            startActivity(i);
+//                                            Intent i = new Intent(NoticeFeedback.this,Notices.class);
+//                                            startActivity(i);
 
                                         }
                                         else {
@@ -123,6 +128,7 @@ public class NoticeFeedback extends AppCompatActivity {
                                             Toast.makeText(NoticeFeedback.this,"Network Error",Toast.LENGTH_SHORT).show();
 
                                         }
+
                                     }
                                 });
                     }
@@ -130,10 +136,19 @@ public class NoticeFeedback extends AppCompatActivity {
                         Toast.makeText( NoticeFeedback.this, "This" + email + "already Exists",Toast.LENGTH_SHORT).show();
                         loadingBar.dismiss();
                         Toast.makeText(NoticeFeedback.this, "Please Try again using another email Address", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(NoticeFeedback.this,Notices.class);
-                        startActivity(i);
+//                        Intent i = new Intent(NoticeFeedback.this,Notices.class);
+//                        startActivity(i);
 
                     }
+                    mview.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            new AlertDialog.Builder(NoticeFeedback.this)
+                                    .setTitle("Send Details: ")
+                                    .setMessage("Name - " + name + "\n\n" + "Email - " + email + "\n\n" + "Comment - " + comment)
+                                    .show();
+                        }
+                    });
                     }
 
                 @Override
