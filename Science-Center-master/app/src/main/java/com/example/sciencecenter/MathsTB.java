@@ -10,6 +10,25 @@ public class MathsTB {
     private String attendance;
     private String date;
 
+    public String getFee() {
+        return fee;
+    }
+
+    public void setFee(String fee) {
+        this.fee = fee;
+    }
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
+    }
+
+    private String fee;
+    private String payment;
+
 
     public MathsTB() {
     }
