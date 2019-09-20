@@ -3,7 +3,6 @@
     <string name="powered_by_innovators">Powered by Innovators</string>
     <string name="attenders">Attenders</string>
     <string name="profile">Profile</string>
-    <string name="todo">TODO</string>
     <string name="payments">PayMents</string>
     <string name="log_in">Log IN</string>
     <string name="attendes">Attendes</string>
@@ -17,7 +16,6 @@
     <string name="payment">Payment</string>
     <string name="login">LogIn</string>
     <string name="profile1">Profile</string>
-    <string name="class1">CLASS</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
     <string name="ForgetPassword">Forget Password</string>
@@ -31,7 +29,38 @@
     <string name="Email">email</string>
     <string name="Phone">phone</string>
     <string name="Register">register</string>
+    <string name="btnFback">btnFback</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="class1">Choose a class</string>
+    <string name="todo1">TODO</string>
+    <string name="time">Time</string>
+    <string name="class_teacher">Class Teacher</string>
+    <string name="hall_number">Hall Number</string>
+    <string name="todo">TODO</string>
+    <string name="name">Name</string>
+    <string name="text_area">Text Area</string>
+    <string name="reset">Reset</string>
+    <string name="view_feedback">View Feedback</string>
+    <string name="view_feedback_btn">View FeedBack</string>
+
+    <string-array name="Subject">
+        <item>Choose ....</item>
+        <item>Bio</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>Maths</item>
+        <item>ICT</item>
+    </string-array>
+
+    <string-array name="gread">
+        <item>Choose ....</item>
+        <item>12Thory</item>
+        <item>13Thory</item>
+        <item>12Revition</item>
+        <item>13Revition</item>
+        <item></item>
+    </string-array>
 </resources>

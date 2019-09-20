@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Crud"></activity>
-        <activity android:name=".Add_payment_details" />
+        <activity android:name=".View_Feedback"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ClassInside" />
+        <activity android:name=".NoticeFeedback"
+            android:screenOrientation="portrait"/>
         <activity android:name=".register" />
-        <activity android:name=".fragment_class" />
         <activity android:name=".Profile" />
         <activity android:name=".Payment" />
         <activity android:name=".Attendees" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,5 +30,9 @@
         <activity android:name=".Login" />
         <activity android:name=".Home" />
     </application>
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
 
 </manifest>

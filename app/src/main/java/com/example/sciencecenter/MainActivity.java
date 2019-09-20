@@ -1,16 +1,13 @@
 package com.example.sciencecenter;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.service.autofill.OnClickAction;
-import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 5000; //This is 8 seconds
 
     Button noticesBtn, classBtn;
@@ -26,20 +23,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent HomeInten = new Intent(MainActivity.this,Home.class);
+                Intent HomeInten = new Intent(MainActivity.this, Home.class);
                 startActivity(HomeInten);
                 finish();
             }
-        },SPLASH_TIME_OUT);
+        }, 3000);
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-
-            case R.id.btnN:
-                getSupportFragmentManager().beginTransaction().replace(R.id.defaultFragment, new NoticesHome()).commit();
-
-        }
-    }
 }
+

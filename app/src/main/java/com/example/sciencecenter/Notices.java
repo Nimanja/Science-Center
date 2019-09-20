@@ -1,11 +1,11 @@
 package com.example.sciencecenter;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Notices extends AppCompatActivity {
 
@@ -60,12 +60,39 @@ public class Notices extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
         button = findViewById(R.id.btnpf);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Profile.class);
+                startActivity(i);
+            }
+        });
+
+        button = findViewById(R.id.btnclz);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),ClassInside.class);
+                startActivity(i);
+            }
+        });
+        button =findViewById(R.id.btnFeedback);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), NoticeFeedback.class);
+                startActivity(i);
+            }
+        });
+        button = findViewById(R.id.ViewFB);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), View_Feedback.class);
                 startActivity(i);
             }
         });
