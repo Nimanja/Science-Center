@@ -50,7 +50,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:fontFamily="sans-serif-black"
-            android:text="@string/notices"
+            android:text="Class"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="35sp"
@@ -64,7 +64,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="570dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,13 +86,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="#ffffff"
-                android:entries="@array/gread"
+                android:entries="@array/Grade"
                 android:prompt="@string/class1" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
+                android:layout_marginTop="50dp"
                 android:text="@string/time"
                 android:textAlignment="center" />
 
@@ -108,14 +111,75 @@
                 android:text="@string/class_teacher"
                 android:textAlignment="center" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                app:srcCompat="@drawable/logo"
-                android:contentDescription="@string/todo" />
-
         </LinearLayout>
     </ScrollView>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnH"
+            android:layout_width="52dp"
+            android:layout_height="54dp"
+            android:background="@drawable/home"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnA"
+            app:layout_constraintEnd_toStartOf="@+id/btnA"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnA"
+            android:layout_width="52dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/attendace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnP"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnH"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+        <Button
+            android:id="@+id/btnP"
+            android:layout_width="52dp"
+            android:layout_height="54dp"
+            android:background="@drawable/pay"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnA"
+            app:layout_constraintEnd_toStartOf="@+id/btnN"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnA" />
+
+        <Button
+            android:id="@+id/btnN"
+            android:layout_width="52dp"
+            android:layout_height="54dp"
+            android:background="@drawable/noticesicon"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnP"
+            app:layout_constraintEnd_toStartOf="@+id/btnpf"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnP" />
+
+        <Button
+            android:id="@+id/btnpf"
+            android:layout_width="52dp"
+            android:layout_height="54dp"
+            android:background="@drawable/profile"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnN" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#2196F3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminNotices">
+
+
+    <EditText
+        android:id="@+id/StartTime"
+        android:layout_width="171dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="time"
+        android:hint="Start Time"
+        app:layout_constraintEnd_toStartOf="@+id/EndTime"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classtype2" />
+
+    <EditText
+        android:id="@+id/EndTime"
+        android:layout_width="171dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="End Time"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/StartTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classtype2" />
+
+    <TextView
+        android:id="@+id/setDate"
+        android:layout_width="364dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="Select Date"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EndTime" />
+
+    <ImageView
+        android:id="@+id/headerBGC"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorAccent" />
+
+    <Spinner
+        android:id="@+id/classtype"
+        android:layout_width="365dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/namebar"
+        android:entries="@array/Grade"
+        app:layout_constraintBottom_toTopOf="@+id/classtype2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <Spinner
+        android:id="@+id/classtype2"
+        android:layout_width="365dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/namebar"
+        app:layout_constraintBottom_toTopOf="@+id/StartTime"
+        android:entries="@array/Teachers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classtype"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="365dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/namebar"
+        android:entries="@array/Subject"
+        app:layout_constraintBottom_toTopOf="@+id/classtype"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBGC" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Admin Panel"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/headerBGC"
+        app:layout_constraintEnd_toEndOf="@+id/headerBGC"
+        app:layout_constraintStart_toStartOf="@+id/headerBGC"
+        app:layout_constraintTop_toTopOf="@+id/headerBGC" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
