@@ -71,15 +71,15 @@ public class Notices extends AppCompatActivity {
             }
         });
 
-        button = findViewById(R.id.btnclz);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),ClassInside.class);
-                startActivity(i);
-            }
-        });
+//        button = findViewById(R.id.btnclz);
+//
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getApplicationContext(),ClassInside.class);
+//                startActivity(i);
+//            }
+//        });
         button =findViewById(R.id.btnFeedback);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
