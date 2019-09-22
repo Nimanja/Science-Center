@@ -180,7 +180,7 @@ public class NoticeFeedback extends AppCompatActivity {
                                         Toast.makeText(NoticeFeedback.this, "Feedback is successful Thank you", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
 
-//                                            Intent i = new Intent(NoticeFeedback.this,Notices.class);
+//                                           Intent i = new Intent(NoticeFeedback.this,View_Feedback.class);
 //                                            startActivity(i);
 
                                     } else {
@@ -206,6 +206,7 @@ public class NoticeFeedback extends AppCompatActivity {
                                 .setTitle("Send Details: ")
                                 .setMessage("Name - " + name + "\n\n" + "Phone - " + phone + "\n\n" + "Comment - " + comment)
                                 .show();
+
                     }
                 });
             }

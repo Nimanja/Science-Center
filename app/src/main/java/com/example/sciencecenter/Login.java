@@ -1,13 +1,13 @@
 package com.example.sciencecenter;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static com.example.sciencecenter.R.id.txtview_register;
 
@@ -28,6 +28,13 @@ public class Login extends AppCompatActivity {
         btnlogin = (Button)findViewById(R.id.btnlogin);
         txtclickhere = (TextView)findViewById(txtview_register);
 
+        txtclickhere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent admin = new Intent(getApplicationContext(), AdminNotices.class);
+                startActivity(admin);
+            }
+        });
 
         button = findViewById(R.id.btnback);
 

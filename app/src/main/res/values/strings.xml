@@ -45,6 +45,13 @@
     <string name="reset">Reset</string>
     <string name="view_feedback">View Feedback</string>
     <string name="view_feedback_btn">View FeedBack</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="class_name">Class Name</string>
+    <string name="textview2">TextView</string>
+    <string name="textview1">TextView</string>
+    <string name="button">Button</string>
+    <string name="todo5">TODO</string>
+    <string name="todo6">TODO</string>
 
     <string-array name="Subject">
         <item>Choose Subject ....</item>
