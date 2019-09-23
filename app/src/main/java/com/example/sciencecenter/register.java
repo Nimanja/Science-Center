@@ -1,17 +1,15 @@
 package com.example.sciencecenter;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class register extends AppCompatActivity {
     SQLiteOpenHelper openHelper;
@@ -23,7 +21,6 @@ public class register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        openHelper = new DatabaseHelper(this);
         _btnreg = (Button)findViewById(R.id.btnreg);
         _txtfname = (EditText)findViewById(R.id.txtfname);
         _txtlname = (EditText)findViewById(R.id.txtlname);
@@ -48,11 +45,5 @@ public class register extends AppCompatActivity {
     }
     public void insertdata(String fname,String lname,String pass,String email,String phone){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(DatabaseHelper.COL_2,fname);
-        contentValues.put(DatabaseHelper.COL_3,lname);
-        contentValues.put(DatabaseHelper.COL_4,pass);
-        contentValues.put(DatabaseHelper.COL_5,email);
-        contentValues.put(DatabaseHelper.COL_6,phone);
-        long id = db.insert(DatabaseHelper.TABLE_NAME,null,contentValues);
     }
 }

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "490862743270-bmga69fl1iepd2lft9g37sal6ab2ui9f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sciencecenter",
+            "certificate_hash": "bb35d3e452408bc6a0f27fc3a0024137b732b31f"
+          }
+        },
+        {
           "client_id": "490862743270-34lecs36ibla9k7b35egql3tf8dd2fnf.apps.googleusercontent.com",
           "client_type": 3
         }

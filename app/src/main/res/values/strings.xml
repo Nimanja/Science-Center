@@ -45,9 +45,16 @@
     <string name="reset">Reset</string>
     <string name="view_feedback">View Feedback</string>
     <string name="view_feedback_btn">View FeedBack</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="class_name">Class Name</string>
+    <string name="textview2">TextView</string>
+    <string name="textview1">TextView</string>
+    <string name="button">Button</string>
+    <string name="todo5">TODO</string>
+    <string name="todo6">TODO</string>
 
     <string-array name="Subject">
-        <item>Choose ....</item>
+        <item>Choose Subject ....</item>
         <item>Bio</item>
         <item>Physics</item>
         <item>Chemistry</item>
@@ -55,12 +62,19 @@
         <item>ICT</item>
     </string-array>
 
-    <string-array name="gread">
-        <item>Choose ....</item>
-        <item>12Thory</item>
-        <item>13Thory</item>
-        <item>12Revition</item>
-        <item>13Revition</item>
-        <item></item>
+    <string-array name="Grade">
+        <item>Choose Grade....</item>
+        <item>12 Theory</item>
+        <item>13 Theory</item>
+        <item>12 Revision</item>
+        <item>13 Revision</item>
+    </string-array>
+
+    <string-array name="Teachers">
+        <item>Choose Teachers....</item>
+        <item>Saman Athula</item>
+        <item>Gamini Ranatunga</item>
+        <item>Rohan Kumara</item>
+        <item>Nimala karunaratne</item>
     </string-array>
 </resources>

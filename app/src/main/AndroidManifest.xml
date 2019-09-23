@@ -9,16 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View_Feedback"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".ClassInside" />
-        <activity android:name=".NoticeFeedback"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".register" />
-        <activity android:name=".Profile" />
-        <activity android:name=".Payment" />
-        <activity android:name=".Attendees" />
-        <activity android:name=".MainActivity"
+        <activity android:name=".AdminPanelNotices"></activity>
+        <activity android:name=".AdminNotices" />
+        <activity
+            android:name=".View_Feedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ClassInside"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NoticeFeedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Attendees"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,13 +41,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Notices" />
-        <activity android:name=".Login" />
-        <activity android:name=".Home" />
+        <activity
+            android:name=".Notices"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait" />
     </application>
 
     <uses-feature
         android:name="android.hardware.Camera"
         android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

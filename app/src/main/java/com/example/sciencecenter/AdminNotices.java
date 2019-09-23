@@ -26,11 +26,11 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
-public class NoticeFeedback extends AppCompatActivity {
+public class AdminNotices extends AppCompatActivity {
 
-//    private static final int GalleryPick = 1;
+    //    private static final int GalleryPick = 1;
 
-    private EditText mfbnameText, mmsgText, mPhone;
+    private EditText msubname, mGrade, mcomment;
     private Button msubbtn, mview, backbtn, mClear;
     private ProgressDialog loadingBar;
 //  private ImageView mImageView;
@@ -38,17 +38,15 @@ public class NoticeFeedback extends AppCompatActivity {
 
     private Uri mImageUri;
 
-
     FirebaseApp firebase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notice_feedback);
-
-        mfbnameText = findViewById(R.id.fbnameText);
-        mPhone = findViewById(R.id.PhoneText);
-        mmsgText = findViewById(R.id.msgText);
+        setContentView(R.layout.activity_admin_notices);
+        msubname = findViewById(R.id.subname);
+        mGrade = findViewById(R.id.Grade);
+        mcomment = findViewById(R.id.comment);
         msubbtn = findViewById(R.id.subbtn);
         mview = findViewById(R.id.fbview);
 //        mChooseImg = findViewById(R.id.ChooseImg);
@@ -74,7 +72,7 @@ public class NoticeFeedback extends AppCompatActivity {
         mClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                        Clear();
+                Clear();
             }
         });
 
@@ -95,57 +93,30 @@ public class NoticeFeedback extends AppCompatActivity {
     }
 
     private void Clear() {
-        String name = mfbnameText.getText().toString();
-        String phone = mPhone.getText().toString();
-        String comment = mmsgText.getText().toString();
+        String subject = msubname.getText().toString();
+        String grade = mGrade.getText().toString();
+        String comment = mcomment.getText().toString();
 
-        if(name.isEmpty() && phone.isEmpty() && comment.isEmpty()){
+        if(subject.isEmpty() && grade.isEmpty() && comment.isEmpty()){
             Toast.makeText(this,"Already Empty! ",Toast.LENGTH_SHORT).show();
         }
-//        else if (!name.isEmpty() || !phone.isEmpty() || !comment.isEmpty()){
-//            mfbnameText.setText("");
-//            mPhone.setText("");
-//            mmsgText.setText("");
-//        }
+
         else {
-            mfbnameText.setText("");
-            mPhone.setText("");
-            mmsgText.setText("");
+            msubname.setText("");
+            mGrade.setText("");
+            mcomment.setText("");
         }
     }
 
-//    private void openFileChooser() {
-//        Intent intent = new Intent();
-//        intent.setAction(Intent.ACTION_GET_CONTENT);
-//        intent.setType("image/*");
-//        startActivityForResult(intent, GalleryPick);
-//    }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if (requestCode == GalleryPick && requestCode == RESULT_OK && data != null) {
-//            mImageUri = data.getData();
-//            mImageView.setImageURI(mImageUri);
-//
-////            Picasso.get().load(mImageUri).into(mImageView); // we can Do this type View Image but this is Better than This type ---> mImageView.setImageURI(mImageUri);
-//
-//        }
-//    }
-
     private void SubmitBtn() {
-        String name = mfbnameText.getText().toString();
-        String phone = mPhone.getText().toString();
-        String comment = mmsgText.getText().toString();
-        if (TextUtils.isEmpty(name)) {
-            Toast.makeText(this, "Enter your name", Toast.LENGTH_SHORT).show();
-        } else if (TextUtils.isEmpty(phone)) {
-            Toast.makeText(this, "Enter your phone", Toast.LENGTH_SHORT).show();
-        } else if (phone.length() <10 && phone.length() > 10){
-            Toast.makeText(this ,"plz Enter valid phone number",Toast.LENGTH_SHORT).show();
-        }
-        else if (TextUtils.isEmpty(comment)) {
+        String Subject = msubname.getText().toString();
+        String Grade = mGrade.getText().toString();
+        String comment = mcomment.getText().toString();
+        if (TextUtils.isEmpty(Subject)) {
+            Toast.makeText(this, "Enter your subject", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(Grade)) {
+            Toast.makeText(this, "Enter your Grade", Toast.LENGTH_SHORT).show();
+        }else if (TextUtils.isEmpty(comment)) {
             Toast.makeText(this, "Enter your Comment", Toast.LENGTH_SHORT).show();
         } else {
             loadingBar.setTitle("Feedback");
@@ -153,12 +124,12 @@ public class NoticeFeedback extends AppCompatActivity {
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
-            validatephone(name, phone, comment);
+            validatephone(Subject, Grade, comment);
         }
     }
 
 
-    private void validatephone(final String name, final String phone, final String comment) {
+    private void validatephone(final String Subject, final String Grade, final String comment) {
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
 
@@ -166,18 +137,18 @@ public class NoticeFeedback extends AppCompatActivity {
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (!(dataSnapshot.child("Users").child(phone).exists())) {
+                if (!(dataSnapshot.child("Users").child(Grade).exists())) {
                     HashMap<String, Object> userdateMap = new HashMap<>();
-                    userdateMap.put("Email", phone);
-                    userdateMap.put("name", name);
+                    userdateMap.put("Grade", Grade);
+                    userdateMap.put("Subject", Subject);
                     userdateMap.put("Comment", comment);
 
-                    RootRef.child("FeedBack").child(phone).updateChildren(userdateMap)
+                    RootRef.child("Notices").child(Grade).updateChildren(userdateMap)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(NoticeFeedback.this, "Feedback is successful Thank you", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(AdminNotices.this, "Feedback is successful Thank you", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
 
 //                                           Intent i = new Intent(NoticeFeedback.this,View_Feedback.class);
@@ -185,16 +156,16 @@ public class NoticeFeedback extends AppCompatActivity {
 
                                     } else {
                                         loadingBar.dismiss();
-                                        Toast.makeText(NoticeFeedback.this, "Network Error", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(AdminNotices.this, "Network Error", Toast.LENGTH_SHORT).show();
 
                                     }
 
                                 }
                             });
                 } else {
-                    Toast.makeText(NoticeFeedback.this, "This" + phone + "already Exists", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminNotices.this, "This" + Grade + "already Exists", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
-                    Toast.makeText(NoticeFeedback.this, "Please Try again using another email Address", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminNotices.this, "Please Try again using another email Address", Toast.LENGTH_SHORT).show();
 //                        Intent i = new Intent(NoticeFeedback.this,Notices.class);
 //                        startActivity(i);
 
@@ -202,9 +173,9 @@ public class NoticeFeedback extends AppCompatActivity {
                 mview.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        new AlertDialog.Builder(NoticeFeedback.this)
+                        new AlertDialog.Builder(AdminNotices.this)
                                 .setTitle("Send Details: ")
-                                .setMessage("Name - " + name + "\n\n" + "Phone - " + phone + "\n\n" + "Comment - " + comment)
+                                .setMessage("Name - " + Subject + "\n\n" + "Phone - " + Grade + "\n\n" + "Comment - " + comment)
                                 .show();
 
                     }

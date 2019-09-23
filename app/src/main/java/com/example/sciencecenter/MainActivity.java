@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 5000; //This is 8 seconds
+    private static int SPLASH_TIME_OUT = 5000; //This is 5 seconds
 
     Button noticesBtn, classBtn;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent HomeInten = new Intent(MainActivity.this, Home.class);
+                Intent HomeInten = new Intent(MainActivity.this, Login.class);
                 startActivity(HomeInten);
                 finish();
             }
