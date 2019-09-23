@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Attendance_Manage">
+
+    <Button
+        android:id="@+id/btnH"
+        android:layout_width="52dp"
+        android:layout_height="54dp"
+        android:background="@drawable/home"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnA"
+        app:layout_constraintEnd_toStartOf="@+id/btnA"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnA"
+        android:layout_width="52dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/attendace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnP"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnH"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <Button
+        android:id="@+id/btnP"
+        android:layout_width="52dp"
+        android:layout_height="54dp"
+        android:background="@drawable/pay"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnA"
+        app:layout_constraintEnd_toStartOf="@+id/btnN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnA" />
+
+    <Button
+        android:id="@+id/btnN"
+        android:layout_width="52dp"
+        android:layout_height="54dp"
+        android:background="@drawable/noticesicon"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnP"
+        app:layout_constraintEnd_toStartOf="@+id/btnpf"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnP" />
+
+    <Button
+        android:id="@+id/btnpf"
+        android:layout_width="52dp"
+        android:layout_height="54dp"
+        android:background="@drawable/profile"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnN" />
+
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:background="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/headerView"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/headerView"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorAccent"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/attendance"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/headerView"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toEndOf="@+id/btnback"
+        app:layout_constraintTop_toTopOf="@+id/headerView" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/LLmain"
+        android:layout_width="0dp"
+        android:layout_height="570dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/Spin1"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/Tvdate1"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:hint="@string/date"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/BtnCal"
+                style="@android:style/Widget.Button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/icalender" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="90dp">
+
+            <EditText
+                android:id="@+id/EtStID1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="75dp"
+                android:ems="10"
+                android:hint="@string/student_id"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/StdName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="75dp"
+                android:ems="10"
+                android:hint="@string/student_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/TvAttnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/attendance"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/RbAb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="@string/absent"
+                android:textColor="#20D828" />
+
+            <RadioButton
+                android:id="@+id/RbPr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/present"
+                android:textColor="#DF1F11" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/LL3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:background="@drawable/asave"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/BtnSave"
+                style="@android:style/Widget.Button"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="@string/save"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:background="@drawable/aview"
+                android:layout_marginLeft="10dp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/BtnView"
+                style="@android:style/Widget.Button"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:text="@string/view"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/LL4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:background="@drawable/aedit"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/BtnUpdate"
+                style="@android:style/Widget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="@string/update"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/atrash" />
+
+
+            <Button
+
+                android:id="@+id/BtnDelete"
+                style="@android:style/Widget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:text="@string/delete"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
