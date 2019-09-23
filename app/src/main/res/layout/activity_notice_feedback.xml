@@ -38,9 +38,9 @@
                     android:layout_height="50dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/logo"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintBottom_toBottomOf="@+id/feedbackTop"
                     app:layout_constraintEnd_toEndOf="@+id/headerView"
-                    app:layout_constraintTop_toTopOf="@+id/textView2" />
+                    app:layout_constraintTop_toTopOf="@+id/feedbackTop" />
 
                 <ImageView
                     android:id="@+id/headerView"
@@ -54,7 +54,7 @@
                     app:srcCompat="@color/colorAccent" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/feedbackTop"
                     android:layout_width="178dp"
                     android:layout_height="48dp"
                     android:fontFamily="sans-serif-black"
