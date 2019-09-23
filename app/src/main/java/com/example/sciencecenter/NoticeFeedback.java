@@ -46,6 +46,8 @@ public class NoticeFeedback extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice_feedback);
 
+
+
         mfbnameText = findViewById(R.id.fbnameText);
         mPhone = findViewById(R.id.PhoneText);
         mmsgText = findViewById(R.id.msgText);
@@ -92,7 +94,10 @@ public class NoticeFeedback extends AppCompatActivity {
             }
         });
 
+
     }
+
+
 
     private void Clear() {
         String name = mfbnameText.getText().toString();
@@ -168,7 +173,7 @@ public class NoticeFeedback extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (!(dataSnapshot.child("Users").child(phone).exists())) {
                     HashMap<String, Object> userdateMap = new HashMap<>();
-                    userdateMap.put("Email", phone);
+                    userdateMap.put("Phone", phone);
                     userdateMap.put("name", name);
                     userdateMap.put("Comment", comment);
 

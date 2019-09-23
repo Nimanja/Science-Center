@@ -92,7 +92,7 @@ public class Notices extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), View_Feedback.class);
+                Intent i = new Intent(getApplicationContext(), ViewFeedback.class);
                 startActivity(i);
             }
         });

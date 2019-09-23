@@ -41,7 +41,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/logo"
-                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintBottom_toBottomOf="@+id/feedbackTop"
                 app:layout_constraintEnd_toEndOf="@+id/headerView"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Admin panel"
+                android:text="Admin Panel"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="35sp"
@@ -84,7 +84,7 @@
             android:hint="Subject"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:textColor="#ffff"
+            android:textColor="#000000"
             android:textColorHint="#636363" />
 
         <EditText
@@ -98,7 +98,7 @@
             android:hint="Grade"
             android:importantForAutofill="no"
             android:inputType="text|phone"
-            android:textColor="#ffff"
+            android:textColor="#000000"
             android:textColorHint="#636363" />
 
         <EditText
@@ -113,7 +113,7 @@
             android:importantForAutofill="no"
             android:inputType="text"
             android:textAlignment="viewStart"
-            android:textColor="#ffff"
+            android:textColor="#000000"
             android:textColorHint="#636363"
             android:textSize="20sp" />
 
@@ -142,22 +142,6 @@
             android:layout_marginEnd="20dp"
             android:text="@string/view_feedback" />
 
-
-        <TextView
-            android:id="@+id/setDate"
-            android:layout_width="364dp"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:hint="Select Date"
-            android:inputType="date"
-            android:textAlignment="center"
-            android:textSize="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="417dp" />
 
     </LinearLayout>
     </ScrollView>

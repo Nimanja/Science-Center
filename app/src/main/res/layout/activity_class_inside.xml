@@ -17,9 +17,9 @@
             android:layout_height="50dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/logo"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="@+id/feedbackTop"
             app:layout_constraintEnd_toEndOf="@+id/headerView"
-            app:layout_constraintTop_toTopOf="@+id/textView2" />
+            app:layout_constraintTop_toTopOf="@+id/feedbackTop" />
 
         <Button
             android:id="@+id/btnback"
@@ -27,9 +27,9 @@
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:background="?attr/actionModeCloseDrawable"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="@+id/feedbackTop"
             app:layout_constraintStart_toStartOf="@+id/headerView"
-            app:layout_constraintTop_toTopOf="@+id/textView2" />
+            app:layout_constraintTop_toTopOf="@+id/feedbackTop" />
 
         <ImageView
             android:id="@+id/headerView"
@@ -43,7 +43,7 @@
             app:srcCompat="@color/colorAccent" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/feedbackTop"
             android:layout_width="144dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
