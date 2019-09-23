@@ -288,6 +288,7 @@
                 android:layout_height="match_parent"/>
 
             <Button
+                android:onClick="view"
                 android:id="@+id/BtnView"
                 style="@android:style/Widget.Button"
                 android:layout_width="75dp"
@@ -312,6 +313,7 @@
                 android:layout_height="match_parent"/>
 
             <Button
+                android:onClick="update"
                 android:id="@+id/BtnUpdate"
                 style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
@@ -328,7 +330,7 @@
 
 
             <Button
-
+                android:onClick="delete"
                 android:id="@+id/BtnDelete"
                 style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
