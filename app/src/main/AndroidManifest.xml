@@ -9,15 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewFeedback"></activity>
+        <activity android:name=".AdminView"></activity>
         <activity android:name=".AdminPanelNotices" />
         <activity android:name=".AdminNotices" />
-        <activity
-            android:name=".View_Feedback"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ClassInside"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".NoticeFeedback"
             android:screenOrientation="portrait" />
@@ -56,8 +51,8 @@
     <uses-feature
         android:name="android.hardware.Camera"
         android:required="true" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.iid.Registrar;
+
 import static com.example.sciencecenter.R.id.txtview_register;
 
 public class Login extends AppCompatActivity {
@@ -31,7 +33,7 @@ public class Login extends AppCompatActivity {
         txtclickhere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent admin = new Intent(getApplicationContext(), AdminNotices.class);
+                Intent admin = new Intent(getApplicationContext(), AdminPanelNotices.class);
                 startActivity(admin);
             }
         });
@@ -94,10 +96,11 @@ public class Login extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),register.class);
+                Intent i = new Intent(getApplicationContext(), Registrar.class);
                 startActivity(i);
             }
         });
+
 
 
     }
