@@ -1,5 +1,6 @@
 package com.example.sciencecenter;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -16,8 +17,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -105,8 +109,8 @@ public class Attendance_Manage extends AppCompatActivity {
 
 
         //radio_Button
-       /* public void onRadioButtonClicked{
-            // Is the button now checked?
+       // public void onRadioButtonClicked(){
+            /*// Is the button now checked?
             boolean checked = ((RadioButton) view).isChecked();
 
             // Check which radio button was clicked
@@ -119,8 +123,8 @@ public class Attendance_Manage extends AppCompatActivity {
                     if (checked)
                         tvatt.setText("Present");
                         break;
-            }
-        }*/
+            }*/
+       // }
 
 
         //Spinner
@@ -296,5 +300,381 @@ public class Attendance_Manage extends AppCompatActivity {
 
     }
 
-    //
+    //VIEW OPERATION
+    public void view(View view){
+
+        if (tvsub.getText()=="Maths") {
+            DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("MathsTB").child(etID.getText().toString().trim());
+            readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChildren()) {
+                        etName.setText(dataSnapshot.child("name").getValue().toString());
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Display", Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        if (tvsub.getText()=="Physics") {
+            DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("PhysicsTB").child(etID.getText().toString().trim());
+            readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChildren()) {
+                        etName.setText(dataSnapshot.child("name").getValue().toString());
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Display", Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        if (tvsub.getText()=="Chemistry") {
+            DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("ChemistryTB").child(etID.getText().toString().trim());
+            readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChildren()) {
+                        etName.setText(dataSnapshot.child("name").getValue().toString());
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Display", Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        if (tvsub.getText()=="Biology") {
+            DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("BioTB").child(etID.getText().toString().trim());
+            readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChildren()) {
+                        etName.setText(dataSnapshot.child("name").getValue().toString());
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Display", Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        if (tvsub.getText()=="ICT") {
+            DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("ICT_TB").child(etID.getText().toString().trim());
+            readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChildren()) {
+                        etName.setText(dataSnapshot.child("name").getValue().toString());
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Display", Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+    }
+
+    //UPDATE OPERATION
+    public void update(View view){
+
+        if (tvsub.getText()=="Maths") {
+            DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("MathsTB");
+            upRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        try {
+                            mtb.setID(Integer.parseInt(etID.getText().toString().trim()));
+                            mtb.setName(etName.getText().toString().trim());
+                            mtb.setAttendance(tvatt.getText().toString().trim());
+                            mtb.setSubject(tvsub.getText().toString().trim());
+                            mtb.setDate(tvdate1.getText().toString().trim());
+
+                            dbRef = FirebaseDatabase.getInstance().getReference().child("MathsTB").child(etID.getText().toString().trim());
+                            dbRef.setValue(mtb);
+                            clear();
+
+                            Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+                        } catch (NumberFormatException e) {
+                            Toast.makeText(getApplicationContext(), "Invalid ID Number", Toast.LENGTH_SHORT).show();
+                        }
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Update", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+        if (tvsub.getText()=="Biology") {
+            DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("BioTB");
+            upRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        try {
+                            mtb.setID(Integer.parseInt(etID.getText().toString().trim()));
+                            mtb.setName(etName.getText().toString().trim());
+                            mtb.setAttendance(tvatt.getText().toString().trim());
+                            mtb.setSubject(tvsub.getText().toString().trim());
+                            mtb.setDate(tvdate1.getText().toString().trim());
+
+                            dbRef = FirebaseDatabase.getInstance().getReference().child("BioTB").child(etID.getText().toString().trim());
+                            dbRef.setValue(btb);
+                            clear();
+
+                            Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+                        } catch (NumberFormatException e) {
+                            Toast.makeText(getApplicationContext(), "Invalid ID Number", Toast.LENGTH_SHORT).show();
+                        }
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Update", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+        if (tvsub.getText()=="Physics") {
+            DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("PhysicsTB");
+            upRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        try {
+                            mtb.setID(Integer.parseInt(etID.getText().toString().trim()));
+                            mtb.setName(etName.getText().toString().trim());
+                            mtb.setAttendance(tvatt.getText().toString().trim());
+                            mtb.setSubject(tvsub.getText().toString().trim());
+                            mtb.setDate(tvdate1.getText().toString().trim());
+
+                            dbRef = FirebaseDatabase.getInstance().getReference().child("PhysicsTB").child(etID.getText().toString().trim());
+                            dbRef.setValue(ptb);
+                            clear();
+
+                            Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+                        } catch (NumberFormatException e) {
+                            Toast.makeText(getApplicationContext(), "Invalid ID Number", Toast.LENGTH_SHORT).show();
+                        }
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Update", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+        if (tvsub.getText()=="Chemistry") {
+            DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("ChemistryTB");
+            upRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        try {
+                            mtb.setID(Integer.parseInt(etID.getText().toString().trim()));
+                            mtb.setName(etName.getText().toString().trim());
+                            mtb.setAttendance(tvatt.getText().toString().trim());
+                            mtb.setSubject(tvsub.getText().toString().trim());
+                            mtb.setDate(tvdate1.getText().toString().trim());
+
+                            dbRef = FirebaseDatabase.getInstance().getReference().child("ChemistryTB").child(etID.getText().toString().trim());
+                            dbRef.setValue(ctb);
+                            clear();
+
+                            Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+                        } catch (NumberFormatException e) {
+                            Toast.makeText(getApplicationContext(), "Invalid ID Number", Toast.LENGTH_SHORT).show();
+                        }
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Update", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        if (tvsub.getText()=="ICT") {
+            DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("ICT_TB");
+            upRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        try {
+                            mtb.setID(Integer.parseInt(etID.getText().toString().trim()));
+                            mtb.setName(etName.getText().toString().trim());
+                            mtb.setAttendance(tvatt.getText().toString().trim());
+                            mtb.setSubject(tvsub.getText().toString().trim());
+                            mtb.setDate(tvdate1.getText().toString().trim());
+
+                            dbRef = FirebaseDatabase.getInstance().getReference().child("ICT_TB").child(etID.getText().toString().trim());
+                            dbRef.setValue(itb);
+                            clear();
+
+                            Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+                        } catch (NumberFormatException e) {
+                            Toast.makeText(getApplicationContext(), "Invalid ID Number", Toast.LENGTH_SHORT).show();
+                        }
+
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Update", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+    }
+
+    //DELETE OPERATION
+    public void delete(View view){
+
+        if (tvsub.getText()=="Maths") {
+            DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("MathsTB");
+            delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("MathsTB").child("etID.getText().toString().trim()");
+                        dbRef.removeValue();
+                        clear();
+                        Toast.makeText(getApplicationContext(), "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Delete", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        if (tvsub.getText()=="Biology") {
+            DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("BioTB");
+            delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("BioTB").child("etID.getText().toString().trim()");
+                        dbRef.removeValue();
+                        clear();
+                        Toast.makeText(getApplicationContext(), "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Delete", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        if (tvsub.getText()=="Physics") {
+            DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("PhysicsTB");
+            delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("PhysicsTB").child("etID.getText().toString().trim()");
+                        dbRef.removeValue();
+                        clear();
+                        Toast.makeText(getApplicationContext(), "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Delete", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+        if (tvsub.getText()=="Chemistry") {
+            DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("ChemistryTB");
+            delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("ChemistryTB").child("etID.getText().toString().trim()");
+                        dbRef.removeValue();
+                        clear();
+                        Toast.makeText(getApplicationContext(), "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Delete", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        if (tvsub.getText()=="ICT") {
+            DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("ICT_TB");
+            delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild("etID.getText().toString().trim()")) {
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("ICT_TB").child("etID.getText().toString().trim()");
+                        dbRef.removeValue();
+                        clear();
+                        Toast.makeText(getApplicationContext(), "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
+                    } else
+                        Toast.makeText(getApplicationContext(), "No Source to Delete", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+    }//end of Delete
+
 }
