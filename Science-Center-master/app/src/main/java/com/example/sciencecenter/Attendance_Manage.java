@@ -108,23 +108,7 @@ public class Attendance_Manage extends AppCompatActivity {
         });//end_Of_Date_Picker
 
 
-        //radio_Button
-       // public void onRadioButtonClicked(){
-            /*// Is the button now checked?
-            boolean checked = ((RadioButton) view).isChecked();
 
-            // Check which radio button was clicked
-            switch(view.getId()) {
-                case R.id.RbAb:
-                    if (checked)
-                        tvatt.setText("Absent");
-                        break;
-                case R.id.RbPr:
-                    if (checked)
-                        tvatt.setText("Present");
-                        break;
-            }*/
-       // }
 
 
         //Spinner
@@ -174,6 +158,24 @@ public class Attendance_Manage extends AppCompatActivity {
 
         tvsub.setText(record);
     }//end_OF_Spinner
+
+    //radio_Button
+     public void onRadioButtonClicked(View view){
+            // Is the button now checked?
+            boolean checked = ((RadioButton) view).isChecked();
+
+            // Check which radio button was clicked
+            switch(view.getId()) {
+                case R.id.RbAb:
+                    if (checked)
+                        tvatt.setText("Absent");
+                        break;
+                case R.id.RbPr:
+                    if (checked)
+                        tvatt.setText("Present");
+                        break;
+            }
+     }
 
 
     //SAVE OPERATION

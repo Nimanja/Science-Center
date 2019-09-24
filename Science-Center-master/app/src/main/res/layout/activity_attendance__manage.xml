@@ -230,7 +230,7 @@
                 android:orientation="vertical">
 
             <RadioButton
-
+                android:onClick="onRadioButtonClicked"
                 android:id="@+id/RbAb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -239,6 +239,7 @@
                 android:textColor="#20D828" />
 
             <RadioButton
+                android:onClick="onRadioButtonClicked"
                 android:id="@+id/RbPr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -252,8 +253,7 @@
                 android:layout_marginLeft="100dp"
                 android:id="@+id/Tvatt"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
