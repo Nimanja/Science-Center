@@ -5,10 +5,29 @@ import java.sql.Date;
 public class PhysicsTB {
 
     private Integer ID;
+
+    public String getFee() {
+        return fee;
+    }
+
+    public void setFee(String fee) {
+        this.fee = fee;
+    }
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
+    }
+
     private String name;
     private String subject;
     private String attendance;
     private String date;
+    private String fee;
+    private String payment;
 
     public PhysicsTB() {
     }
