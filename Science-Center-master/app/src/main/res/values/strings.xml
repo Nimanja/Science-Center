@@ -46,7 +46,7 @@
     <string name="attendance">Attendance</string>
     <string name="student_id">Student ID</string>
     <string name="subject">Subject</string>
-    <string name="date">Date</string>
+
     <string name="_190001">190001</string>
     <string name="student_name">Student Name</string>
     <string name="absent">Absent</string>
@@ -56,6 +56,9 @@
     <string name="save">SAVE</string>
     <string name="update">UPDATE</string>
     <string name="press_date">Press Date</string>
+    <string name="add_payment_details">Add Payment Details</string>
+    <string name="date">Date</string>
+    <string name="ok">OK</string>
 
 
     <string-array name="Subject">

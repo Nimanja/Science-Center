@@ -60,6 +60,59 @@ public class Attendance extends AppCompatActivity  {
         spinner = findViewById(R.id.Spin2);
         etStdID = findViewById(R.id.EtStdID);
 
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Home.class);
+                startActivity(i);
+            }
+        });
+
+
+        buttonH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Home.class);
+                startActivity(i);
+            }
+        });
+
+
+        buttonA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Attendance.class);
+                startActivity(i);
+            }
+        });
+
+
+        buttonP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Payment.class);
+                startActivity(i);
+            }
+        });
+
+
+        buttonN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Notices.class);
+                startActivity(i);
+            }
+        });
+
+
+        buttonPf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Profile.class);
+                startActivity(i);
+            }
+        });
+
 
         //DatePicker
         buttonDate.setOnClickListener(new View.OnClickListener() {

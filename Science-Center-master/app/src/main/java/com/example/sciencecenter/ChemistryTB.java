@@ -19,15 +19,7 @@ public class ChemistryTB {
         this.fee = fee;
     }
 
-    public String getPayment() {
-        return payment;
-    }
 
-    public void setPayment(String payment) {
-        this.payment = payment;
-    }
-
-    private String payment;
 
     public ChemistryTB() {
     }

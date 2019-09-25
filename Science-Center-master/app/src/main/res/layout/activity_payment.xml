@@ -80,34 +80,6 @@
         app:layout_constraintEnd_toEndOf="@+id/headerView"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Admin"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerView" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Petent"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
     <ImageView
         android:id="@+id/headerView"
         android:layout_width="match_parent"
@@ -127,7 +99,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-black"
-        android:text="Payment"
+        android:text="@string/payment"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="35sp"
@@ -143,5 +115,116 @@
         android:layout_height="80dp"
         android:background="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerView">
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="30sp"
+            android:layout_marginRight="75dp"
+            android:layout_marginLeft="75dp"
+            android:id="@+id/EtSIDP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/student_id"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:layout_marginLeft="75dp"
+                android:id="@+id/SpinP"
+                android:layout_width="200dp"
+                android:layout_height="60dp" />
+
+            <Button
+                android:onClick="displaySubList"
+                android:id="@+id/BokP"
+                android:layout_width="57dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/aenter" />
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_marginBottom="10dp"
+            android:id="@+id/TvSubjectP"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/icalender" />
+
+            <Button
+                android:id="@+id/BdateP"
+                style="@android:style/Widget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="75dp"
+                android:text="@string/date"
+                android:textSize="25sp" />
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TvDateP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:text="@string/press_date"
+            android:textSize="30sp" />
+
+        <Button
+            android:onClick="submit"
+            android:id="@+id/BsubmitP"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="50sp"
+            android:layout_marginRight="75dp"
+            android:text="@string/submit"
+            android:textSize="25sp" />
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_marginTop="25sp"
+            android:textSize="25sp"
+            android:id="@+id/TvStsP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -76,6 +76,7 @@
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/logo"
+        android:textColor="#00F10505"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="@+id/headerView"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
@@ -142,7 +143,7 @@
                 android:id="@+id/Spin1"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:textSize="30sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:onClick="displaySubList"
@@ -154,11 +155,13 @@
                  />
 
             <TextView
-                android:textAlignment="center"
+
                 android:id="@+id/Tvdate1"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:hint="@string/date"
+                android:textAlignment="center"
+                android:textColor="#3F51B5"
                 android:textSize="30sp" />
 
             <Button
@@ -199,6 +202,7 @@
                 android:hint="@string/student_id"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
+                android:textColor="#3F51B5"
                 android:textSize="24sp" />
 
             <EditText
@@ -212,39 +216,41 @@
                 android:hint="@string/student_name"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
+                android:textColor="#3F51B5"
                 android:textSize="24sp" />
 
             <TextView
-                android:layout_marginBottom="10dp"
                 android:id="@+id/TvAttnd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="75dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="@string/attendance"
+                android:textColor="#673AB7"
                 android:textSize="30sp" />
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-            <RadioButton
+                <RadioButton
+                    android:id="@+id/RbPr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/present"
+                    android:textColor="#20D828" />
+
+                <RadioButton
                 android:onClick="onRadioButtonClicked"
                 android:id="@+id/RbAb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
                 android:text="@string/absent"
-                android:textColor="#20D828" />
-
-            <RadioButton
-                android:onClick="onRadioButtonClicked"
-                android:id="@+id/RbPr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:text="@string/present"
                 android:textColor="#DF1F11" />
 
             </RadioGroup>
@@ -258,7 +264,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="20dp"
+
             android:id="@+id/LL3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -271,14 +277,16 @@
                 android:layout_height="match_parent"/>
 
             <Button
-                android:onClick="save"
+
                 android:id="@+id/BtnSave"
                 style="@android:style/Widget.Button"
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:onClick="save"
                 android:text="@string/save"
+                android:textColor="#00BCD4"
                 android:textSize="25sp" />
 
             <ImageView
@@ -288,19 +296,21 @@
                 android:layout_height="match_parent"/>
 
             <Button
-                android:onClick="view"
                 android:id="@+id/BtnView"
                 style="@android:style/Widget.Button"
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
+                android:onClick="view"
                 android:text="@string/view"
+                android:textColor="#00BCD4"
                 android:textSize="25sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_marginTop="10dp"
+
             android:id="@+id/LL4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -313,14 +323,15 @@
                 android:layout_height="match_parent"/>
 
             <Button
-                android:onClick="update"
                 android:id="@+id/BtnUpdate"
                 style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
+                android:onClick="update"
                 android:text="@string/update"
+                android:textColor="#00BCD4"
                 android:textSize="25sp" />
 
             <ImageView
@@ -330,14 +341,15 @@
 
 
             <Button
-                android:onClick="delete"
                 android:id="@+id/BtnDelete"
                 style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
+                android:onClick="delete"
                 android:text="@string/delete"
+                android:textColor="#00BCD4"
                 android:textSize="25sp" />
         </LinearLayout>
 

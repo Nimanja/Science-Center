@@ -14,20 +14,14 @@ public class PhysicsTB {
         this.fee = fee;
     }
 
-    public String getPayment() {
-        return payment;
-    }
 
-    public void setPayment(String payment) {
-        this.payment = payment;
-    }
 
     private String name;
     private String subject;
     private String attendance;
     private String date;
     private String fee;
-    private String payment;
+
 
     public PhysicsTB() {
     }

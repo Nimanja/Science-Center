@@ -18,16 +18,10 @@ public class MathsTB {
         this.fee = fee;
     }
 
-    public String getPayment() {
-        return payment;
-    }
 
-    public void setPayment(String payment) {
-        this.payment = payment;
-    }
 
     private String fee;
-    private String payment;
+
 
 
     public MathsTB() {
