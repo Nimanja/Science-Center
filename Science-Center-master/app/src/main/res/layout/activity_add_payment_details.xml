@@ -241,6 +241,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:onClick="save"
                 android:id="@+id/BPSave"
                 style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
